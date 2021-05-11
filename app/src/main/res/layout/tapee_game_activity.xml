@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TapeeGameActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/scoreView"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/score_0"
+        android:paddingTop="@dimen/score_view_padding"
+        android:paddingBottom="@dimen/score_view_padding"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/topLeftBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ED7D39"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintRight_toLeftOf="@+id/topRightBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <View
+        android:id="@+id/topRightBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#5B9BD5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/topLeftBox"
+        app:layout_constraintTop_toBottomOf="@+id/scoreView"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.5"/>
+
+    <View
+        android:id="@+id/bottomLeftBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F8C146"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftBox"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <View
+        android:id="@+id/bottomRightBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#70AD47"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bottomLeftBox"
+        app:layout_constraintTop_toBottomOf="@+id/topRightBox"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
